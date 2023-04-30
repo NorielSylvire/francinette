@@ -8,7 +8,7 @@ cd temp_____ || exit
 rm -rf francinette
 
 # download github
-git clone --recursive https://github.com/xicodomingues/francinette.git
+git clone --recursive https://github.com/NorielSylvire/francinette.git
 
 if [ "$(uname)" != "Darwin" ]; then
 	echo "Admin permissions needed to install C compilers, python, and upgrade current packages"
@@ -73,6 +73,11 @@ fi
 if ! grep "paco=" "$RC_FILE" &> /dev/null; then
 	echo "Short alias not present. Adding it"
 	printf "\nalias paco=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
+fi
+
+if ! grep "sylvie=" "$RC_FILE" &> /dev/null; then
+	echo "Custom alias not present. Adding it"
+	printf "\nalias sylvie=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
 fi
 
 # print help
