@@ -77,7 +77,7 @@ fi
 
 if ! grep "sylvie=" "$RC_FILE" &> /dev/null; then
 	echo "Custom alias not present. Adding it"
-	printf "\nalias sylvie=%s/francinette/tester.sh\n" "$HOME" >> "$RC_FILE"
+	printf "\nalias sylvie=%s/francinette/tester.sh -x\n" "$HOME" >> "$RC_FILE"
 fi
 
 # print help
