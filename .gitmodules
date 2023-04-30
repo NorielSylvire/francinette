@@ -22,3 +22,6 @@
 [submodule "tests/pipex/pipexMedic"]
 	path = tests/pipex/pipexMedic
 	url = https://github.com/xicodomingues/pipexMedic
+[submodule "tests/get_next_line/gnlTester"]
+	path = tests/get_next_line/gnlTester
+	url = https://github.com/NorielSylvire/gnlTester.git
