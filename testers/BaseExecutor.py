@@ -10,7 +10,7 @@ from typing import Set
 
 import pexpect
 from halo import Halo
-from utils.ExecutionContext import get_context, get_timeout, has_bonus, is_strict
+from utils.ExecutionContext import get_context, get_timeout, has_bonus, is_strict, is_extra_info
 from utils.TerminalColors import TC
 from utils.Utils import is_linux, remove_ansi_colors, show_errors_file
 
