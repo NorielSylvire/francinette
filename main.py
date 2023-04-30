@@ -137,6 +137,15 @@ def main():
 	                    help=("Executes the corresponding testers. If no arguments are passed, it asks the user. " +
 	                          f"{TC.YELLOW}This parameter should be the last one in the command line even after " +
 	                          f"the positional parameters{TC.NC}"))
+	parser.add_argument("-x",
+			    "--extra-information",
+			    action='store_true',
+			    help=("Displays more information about the result of each test. Longer outputs are cropped."))
+	parser.add_argument("-X",
+			    "--extra-long-information",
+			    action='store_true',
+			    help=("Displays more information about the result of each test. No outputs are cropped." +
+			    "Expect to reach the maximum number of lines in the terminal for longer tests like GNL."))
 	args = parser.parse_args()
 
 	if args.verbose:
