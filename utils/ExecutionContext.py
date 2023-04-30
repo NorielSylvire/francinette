@@ -41,6 +41,10 @@ def is_strict():
 	return _saved_context.args.strict
 
 
+def is_extra_info():
+	return _saved_context.args.extra_info
+
+
 def get_timeout():
 	return int(_saved_context.args.timeout)
 
