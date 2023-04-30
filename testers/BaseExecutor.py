@@ -169,7 +169,8 @@ class BaseExecutor:
 			return ""
 		timeout = f"TIMEOUT={get_timeout()}"
 		strict = "EXEC_STRICT=1" if is_strict() else ""
-		command = f"make {timeout} {strict} {command}"
+		extra_info = "EXTRA_INFO=1" if is_extra_info() else ""
+		command = f"make {timeout} {strict} {extra_info} {command}"
 		logger.info(f"executing: {command}")
 		output = self.run_tests(command, show_message=not silent, spinner=spinner)
 		logger.info(output)
